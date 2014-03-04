@@ -44,7 +44,7 @@ Color.prototype = {
         strVal = strVal.toLowerCase();
         var that = this,
             result = false;
-        $.each(this.stringParsers, function(i, parser) {
+        jQuery.each(this.stringParsers, function(i, parser) {
             var match = parser.re.exec(strVal),
                 values = match && parser.parse.apply(that, [match]),
                 format = parser.format || 'rgba';
